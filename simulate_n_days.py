@@ -28,7 +28,7 @@ def main():
         trace_x, trace_y = lawnmover.simulate(lawn) #kör gräsklippare
         saved_map = map.cut_saved_map(trace_x, trace_y, saved_map) #simulera klippning
     
-    file = "30_"+file
+    file = str(days)+"_"+file
     io.save_file(saved_map, file) #spara fil
     plot_saved_map(saved_map, f"Simulering {days} dagar")
 main()

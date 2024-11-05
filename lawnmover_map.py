@@ -116,11 +116,5 @@ def cut_saved_map(trace_x: list, trace_y: list, saved_map: list):
         saved_map[y][x] = 1 #område klippt
     return saved_map
 
-#stor karta
-def convert_coordinate(x, y, cols, rows):
-    #cols används inte i denna version
-    y = (rows*EXPAND_RATIO) - 1 - y*EXPAND_RATIO
-    x = x * EXPAND_RATIO
-    return x, y
 
 
