@@ -23,7 +23,7 @@ def main():
     else: #generera om fil försvunnit
         saved_map = map.expand_map(map.load_map("maps/"+file, True))
 
-    for _ in range(days): #simulera 30 ggr
+    for _ in range(days): #simulera n dagar
         saved_map = map.simulate_grass_grow(saved_map) #simulering att gräs växt
         trace_x, trace_y = lawnmover.simulate(lawn) #kör gräsklippare
         saved_map = map.cut_saved_map(trace_x, trace_y, saved_map) #simulera klippning
@@ -31,4 +31,5 @@ def main():
     file = str(days)+"_"+file
     io.save_file(saved_map, file) #spara fil
     plot_saved_map(saved_map, f"Simulering {days} dagar")
+    
 main()

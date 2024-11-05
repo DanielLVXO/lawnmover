@@ -14,7 +14,7 @@ def main():
    
     trace_x, trace_y = lawnmover.simulate(lawn) #simulera gräsklippare
    
-    if os.path.isfile('saved_maps/saved_'+file): #läs in sparad_fil 
+    if os.path.isfile('saved_maps/saved_' + file): #läs in sparad_fil 
         saved_map = map.load_saved_map('saved_maps/saved_'+file)
     else: #generera om fil försvunnit
         saved_map = map.expand_map(map.load_map("maps/"+file, True))
